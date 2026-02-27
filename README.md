@@ -5,6 +5,8 @@ A full-stack E-Commerce assessment project organized as a simple monorepo with t
 - `frontend` → Next.js client application
 - `backend` → Express + MongoDB API
 
+![alt text](image.png)
+
 The app covers the core e-commerce flow:
 
 - browse products
@@ -14,6 +16,8 @@ The app covers the core e-commerce flow:
 - place orders
 - manage products as an admin
 - view basic sales summary reports
+
+  ** [Live URL](https://ecommerce-assessment-ansary.vercel.app/) **
 
 ---
 
