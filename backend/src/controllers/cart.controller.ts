@@ -141,7 +141,10 @@ export const getCart = async (req: Request, res: Response) => {
   }
 };
 
-export const removeFromCart = async (req: Request, res: Response) => {
+export const removeFromCart = async (
+  req: Request<{ productId: string }>,
+  res: Response
+) => {
   try {
     const { productId } = req.params;
     const userId = req.user?.userId;
