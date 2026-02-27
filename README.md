@@ -193,7 +193,7 @@ Create a `backend/.env` file with:
 
 ```env
 PORT=5000
-MONGODB_URI=mongodb://127.0.0.1:27017/shopflow
+MONGODB_URI=Insert your own MongoDB URI here
 JWT_SECRET=change_this_to_a_long_random_secret
 NODE_ENV=development
 ```
