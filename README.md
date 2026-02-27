@@ -5,7 +5,7 @@ A full-stack E-Commerce assessment project organized as a simple monorepo with t
 - `frontend` → Next.js client application
 - `backend` → Express + MongoDB API
 
-The app covers the core e-commerce flow without trying to cosplay as Amazon:
+The app covers the core e-commerce flow:
 
 - browse products
 - search products
@@ -71,27 +71,69 @@ That means you install and run each app separately.
 ```text
 ecommerce-assessment/
 ├── backend/
-│   ├── src/
-│   │   ├── config/
-│   │   ├── controllers/
-│   │   ├── middlewares/
-│   │   ├── models/
-│   │   ├── routes/
-│   │   ├── types/
-│   │   ├── utils/
-│   │   ├── app.ts
-│   │   └── server.ts
-│   ├── .env
-│   ├── .env.example
-│   ├── package.json
-│   └── tsconfig.json
+│   📦src
+      ┣ 📂config
+      ┃ ┣ 📜db.ts
+      ┃ ┗ 📜env.ts
+      ┣ 📂controllers
+      ┃ ┣ 📜auth.controller.ts
+      ┃ ┣ 📜cart.controller.ts
+      ┃ ┣ 📜order.controller.ts
+      ┃ ┣ 📜product.controller.ts
+      ┃ ┗ 📜report.controller.ts
+      ┣ 📂middlewares
+      ┃ ┣ 📜admin.middleware.ts
+      ┃ ┗ 📜auth.middleware.ts
+      ┣ 📂models
+      ┃ ┣ 📜Cart.ts
+      ┃ ┣ 📜Order.ts
+      ┃ ┣ 📜Product.ts
+      ┃ ┗ 📜User.ts
+      ┣ 📂routes
+      ┃ ┣ 📜auth.routes.ts
+      ┃ ┣ 📜cart.routes.ts
+      ┃ ┣ 📜order.routes.ts
+      ┃ ┣ 📜product.routes.ts
+      ┃ ┗ 📜report.routes.ts
+      ┣ 📂types
+      ┃ ┗ 📜express.d.ts
+      ┣ 📂utils
+      ┃ ┣ 📜hash.ts
+      ┃ ┗ 📜jwt.ts
+      ┣ 📜app.ts
+│     ┗ 📜server.ts
+│├── .env
+│├── .env.example
+│├── package.json
+│└── tsconfig.json
 │
 ├── frontend/
 │   ├── public/
-│   ├── src/
-│   │   ├── app/
-│   │   ├── components/
-│   │   └── lib/
+│   ├──📦src
+        ┣ 📂app
+        ┃ ┣ 📂admin
+        ┃ ┃ ┗ 📜page.tsx
+        ┃ ┣ 📂cart
+        ┃ ┃ ┗ 📜page.tsx
+        ┃ ┣ 📂login
+        ┃ ┃ ┗ 📜page.tsx
+        ┃ ┣ 📂products
+        ┃ ┃ ┗ 📜page.tsx
+        ┃ ┣ 📂register
+        ┃ ┃ ┗ 📜page.tsx
+        ┃ ┣ 📜favicon.ico
+        ┃ ┣ 📜globals.css
+        ┃ ┣ 📜layout.tsx
+        ┃ ┗ 📜page.tsx
+        ┣ 📂components
+        ┃ ┣ 📜Navbar.tsx
+        ┃ ┗ 📜ProductForm.tsx
+        ┗ 📂lib
+        ┃ ┣ 📜api.ts
+        ┃ ┗ 📜auth.ts
+│   │
+│   │
+│   │
 │   ├── .env.local
 │   ├── package.json
 │   └── tsconfig.json
