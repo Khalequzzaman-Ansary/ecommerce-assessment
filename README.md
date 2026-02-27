@@ -17,7 +17,7 @@ The app covers the core e-commerce flow:
 - manage products as an admin
 - view basic sales summary reports
 
-  ** [Live URL](https://ecommerce-assessment-ansary.vercel.app/) **
+[Live URL](https://ecommerce-assessment-ansary.vercel.app/)
 
 ---
 
