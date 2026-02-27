@@ -1,0 +1,23 @@
+import { NextFunction, Request, Response } from "express";
+
+export const adminMiddleware = (
+  req: Request,
+  res: Response,
+  next: NextFunction
+) => {
+  if (!req.user) {
+    return res.status(401).json({
+      success: false,
+      message: "Unauthorized",
+    });
+  }
+
+  if (req.user.role !== "admin") {
+    return res.status(403).json({
+      success: false,
+      message: "Forbidden: admin access required",
+    });
+  }
+
+  next();
+};
